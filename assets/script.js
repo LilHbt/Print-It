@@ -31,7 +31,7 @@ let imageCarrousel=document.querySelector('.banner-img')
 let texteCarrousel =document.querySelector('#banner p')
 let dotSelected= document.querySelectorAll('.dot')
 let currentSlide=0
-dotSelected[0].classList.add('dot_selected')
+dotSelected[currentSlide].classList.add('dot_selected')
 
 
 function changeSlide(moveTo) {
