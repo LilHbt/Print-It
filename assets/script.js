@@ -1,18 +1,18 @@
 const slides = [
   {
-    image: "./assets/images/slideshow/slide1.jpg",
+    image: "slide1.jpg",
     tagLine: `Impressions tous formats <span>en boutique et en ligne</span>`,
   },
   {
-    image: "./assets/images/slideshow/slide2.jpg",
+    image: "slide2.jpg",
     tagLine: `Tirages haute définition grand format <span>pour vos bureaux et events</span>`,
   },
   {
-    image: "./assets/images/slideshow/slide3.jpg",
+    image: "slide3.jpg",
     tagLine: `Grand choix de couleurs <span>de CMJN aux pantones</span>`,
   },
   {
-    image: "./assets/images/slideshow/slide4.png",
+    image: "slide4.png",
     tagLine: `Autocollants <span>avec découpe laser sur mesure</span>`,
   },
 ];
@@ -40,7 +40,7 @@ function changeSlide(moveTo) {
     moveTo = slides.length - 1;
   }
   texteCarrousel.innerHTML = slides[moveTo].tagLine;
-  imageCarrousel.src = slides[moveTo].image;
+  imageCarrousel.src = "./assets/images/slideshow/" + slides[moveTo].image;
   dotSelected[moveTo].classList.add("dot_selected");
   dotSelected[currentSlide].classList.remove("dot_selected");
   currentSlide = moveTo;
